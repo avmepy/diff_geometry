@@ -1,0 +1,116 @@
+====== 1 test ======
+--Implicit function theorem--
+F: x**2 + y**2 - 2*z + 5
+G: x - 2*y - z + 8
+P: (5, -2, 17)
+--checking conditions--
+1) Suppose that F, G є C^oo
+2) F((5, -2, 17)) = 0, G((5, -2, 17)) = 0
+
+3) -- checking jacobians --
+
+checking variable: z
+
+jacobian by z:
+matrix: Matrix([[10, -4], [1, -2]])
+det = -16
+
+taking z as a variable
+
+Then there are:
+ -- neighborhood (z0 - a, z0 + a)
+ -- neighborhood V(x0, y0)
+ -- functions f, g:
+    f(z), g(z) є V, z є (z0 - a, z0 + a)
+    (a) f, g є C^oo
+    (b) f(z0) = x0, g(z0) = y0
+
+
+r(z0) = [ 5. -2. 17.]
+-- finding derivatives --
+r'(z0) = [ 0.  -0.5  1. ]
+r''(z0) = [-0.0625  -0.03125  0.     ]
+
+tangent unit: [ 0.         -0.4472136   0.89442719]
+
+normal unit: [-0.91287093 -0.36514837 -0.18257419]
+
+binormal unit: [ 0.40824829 -0.81649658 -0.40824829]
+
+osculating plane: 0.03125*X - 0.0625*Y - 0.03125*Z + 0.25
+
+normal plane: -0.5*Y + 1.0*Z - 18.0
+
+reference plane: -0.912870929175277*X - 0.365148371670111*Y - 0.182574185835055*Z + 6.9378190617321
+
+curvature: 0.05477225575051659
+
+torsion: 0
+
+osculating circle:
+sphere: 136.111111111111*(0.0857142857142857*X + 1)**2 + 75.1111111111111*(0.115384615384615*Y + 1)**2 + 186.777777777778*(0.0731707317073171*Z - 1)**2 - 333.333333333334
+osculating plane: 0.03125*X - 0.0625*Y - 0.03125*Z + 0.25
+
+
+
+
+====== 2 test ======
+--Implicit function theorem--
+F: x**2 + y**2 + z**2 - 3
+G: x**2 + y**2 - 2
+P: (1, 1, 1)
+--checking conditions--
+1) Suppose that F, G є C^oo
+2) F((1, 1, 1)) = 0, G((1, 1, 1)) = 0
+
+3) -- checking jacobians --
+
+checking variable: z
+
+jacobian by z:
+matrix: Matrix([[2, 2], [2, 2]])
+det = 0
+
+checking variable: y
+
+jacobian by y:
+matrix: Matrix([[2, 2], [0, 2]])
+det = 4
+
+taking y as a variable
+
+Then there are:
+ -- neighborhood (y0 - a, y0 + a)
+ -- neighborhood V(z0, x0)
+ -- functions f, g:
+    f(y), g(y) є V, y є (y0 - a, y0 + a)
+    (a) f, g є C^oo
+    (b) f(y0) = z0, g(y0) = x0
+
+
+r(y0) = [1. 1. 1.]
+-- finding derivatives --
+r'(y0) = [ 0. -1.  1.]
+r''(y0) = [ 0. -2.  0.]
+
+tangent unit: [ 0.         -0.70710678  0.70710678]
+
+normal unit: [ 0.         -0.70710678 -0.70710678]
+
+binormal unit: [1. 0. 0.]
+
+osculating plane: 2.0*X - 2.0
+
+normal plane: -1.0*Y + 1.0*Z
+
+reference plane: -0.707106781186547*Y - 0.707106781186547*Z + 1.41421356237309
+
+curvature: 0.7071067811865474
+
+torsion: 0
+
+osculating circle:
+sphere: (X - 1.0)**2 + (Y + 2.22044604925031e-16)**2 + (Z + 2.22044604925031e-16)**2 - 2.0
+osculating plane: 2.0*X - 2.0
+
+Process finished with exit code 0
